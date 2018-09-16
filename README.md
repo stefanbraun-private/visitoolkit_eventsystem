@@ -8,7 +8,7 @@ using ideas from "axel events" https://github.com/axel-events/axel
 and "event system" from http://www.valuedlessons.com/2008/04/events-in-python.html
 
 ## usage
-    import visitoolkit_eventsystem as eventsystem
+    import visitoolkit_eventsystem.eventsystem as eventsystem
 
     # handlers are callback functions in your code,
     # when firing an event visitoolkit_eventsystem will call them with the given argument(s)

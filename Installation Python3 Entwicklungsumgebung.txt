@@ -63,7 +63,11 @@ als Teil eines grösseren Projektes
 neues Environment "visitoolkit_eventsystem" (Python 3.x) erstellen
 -alle Pakete aktualisieren,
 zudem "twine" und "docutils" installieren
+-falls Community-Pakete von Anaconda zur Verfügung stehen sollen:
+"Channels" -> "conda-forge" hinzufügen, "update channels" ausführen
 
+==>Hinweis: eigentlich müsste im Hintergrund dasselbe passieren,
+wenn in "Pycharm" ein neues Conda-Environment erzeugt wird.
 
 Für exakte Duplizierung der Entwicklungsumgebung die Version aller genutzten Conda-Packages erfassen:
 (gemäss https://datascience.stackexchange.com/questions/24093/how-to-clone-python-working-environment-on-another-machine)
@@ -117,7 +121,10 @@ PyPI Package erstellen und veröffentlichen:
 
 
 ==>nun müsste das Python-Package von allen Python-Entwicklern genutzt werden können,
-z.B. in "Pycharm" -> "Settings" -> "Project xxx" -> "Project Interpreter" auf grünes Conda-Zeichen klicken und mittels "+" nach Paket suchen
+z.B. in "Pycharm" -> "Settings" -> "Project xxx" -> "Project Interpreter" (grünes Conda-Zeichen soll inaktiv sein)
+  mittels "+" nach Paket suchen
+z.B. -"Anaconda Prompt" starten, mittels "conda" existierendes Environment aktivieren: "activate xyz"
+  dann z.B. "pip install visitoolkit-eventsystem"
 
 
 ==========================================================================================================

@@ -120,11 +120,14 @@ PyPI Package erstellen und veröffentlichen:
 =>Paket ist dann unter https://pypi.org/project/visitoolkit_eventsystem
 (HINWEIS: offenbar ersetzt PyPI den "_" mit einem "-", darum heisst das PyPI-Paket dann "visitoolkit-eventsystem"...)
 
+
 ==>nun müsste das Python-Package von allen Python-Entwicklern genutzt werden können,
-z.B. in "Pycharm" -> "Settings" -> "Project xxx" -> "Project Interpreter" (grünes Conda-Zeichen soll inaktiv sein)
-  mittels "+" nach Paket suchen
+z.B. in "Pycharm" -> "Settings" -> "Project xxx" -> "Project Interpreter"
+  (grünes Conda-Zeichen muss inaktiv sein, da wir auf PyPI und nicht auf Anaconda suchen)
+  mittels "+" nach Paket suchen oder allenfalls mittels "^" das neueste Release installieren
 z.B. -"Anaconda Prompt" starten, mittels "conda" existierendes Environment aktivieren: "activate xyz"
   dann z.B. "pip install visitoolkit-eventsystem"
+  (mittels "pip install --upgrade visitoolkit-eventsystem" bekommt man das neueste Release)
 
 
 ==========================================================================================================

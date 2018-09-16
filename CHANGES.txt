@@ -1,0 +1,5 @@
+v0.1.2, September 16th 2018 -- rename everything for simplicity and consistency ("pyVisiToolkit-eventsystem" => "visitoolkit_eventsystem")
+
+v0.1.1, September 11th 2018 -- add PyPI description and some development docs in german
+
+v0.1.0, August 26th 2018 -- Initial release.

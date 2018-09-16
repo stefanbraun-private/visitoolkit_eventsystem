@@ -60,7 +60,7 @@ als Teil eines grösseren Projektes
 -Package-Name == Projektname in Pycharm == Projektname auf PyPI
 
 -via Startmenü "Anaconda-Navigator" starten
-neues Environment "visitoolkit" (Python 3.x) erstellen
+neues Environment "visitoolkit_eventsystem" (Python 3.x) erstellen
 -alle Pakete aktualisieren,
 zudem "twine" und "docutils" installieren
 
@@ -68,16 +68,17 @@ zudem "twine" und "docutils" installieren
 Für exakte Duplizierung der Entwicklungsumgebung die Version aller genutzten Conda-Packages erfassen:
 (gemäss https://datascience.stackexchange.com/questions/24093/how-to-clone-python-working-environment-on-another-machine)
 -"Anaconda Prompt" starten
--conda Environment aktivieren: "activate visitoolkit"
+-conda Environment aktivieren: "activate visitoolkit_eventsystem"
+"cd C:\Users\Asenta\PycharmProjects\visitoolkit_eventsystem"
 "conda env export > environment.yml" erzeugt Datei "environment.yml"
 =>Wiederherstellung klappe dann folgendermassen: "conda env create -f environment.yml" // dies habe ich noch nicht ausprobiert...
 
 
 -"Pycharm" starten, "create new "project",
 Name/Ablageort normalerweise im Benutzerverzeichnis: "C:\Users\Asenta\PycharmProjects\visitoolkit_eventsystem"
-das existierende "Conda" Environment "visitoolkit" auswählen
-(falls nicht aufgelistet: "C:\Anaconda3\envs\visitoolkit\python.exe" auswählen,
-Option "Make available to all projects" wählen)
+das existierende "Conda" Environment "visitoolkit_eventsystem" auswählen
+(falls nicht aufgelistet: "C:\Anaconda3\envs\visitoolkit_eventsystem\python.exe" auswählen,
+Option "Make available to all projects" nicht aktivieren)
 
 -"Pycharm" -> New Python package: "visitoolkit_eventsystem" ->ergibt Unterordner im Python-Projektordner
 "eventsystem.py" in diesen Unterordner kopieren oder in "Pycharm" erstellen
@@ -108,7 +109,7 @@ PyPI Package erstellen und veröffentlichen:
 -"Pycharm" -> "Tools" -> "setup.py"-Tasks "sdist" und "bdist_wheel" ausführen
 
 -"Anaconda Prompt" starten
--conda Environment aktivieren: "activate visitoolkit"
+-conda Environment aktivieren: "activate visitoolkit_eventsystem"
 -in Projektverzeichnis wechseln: "cd C:\Users\Asenta\PycharmProjects\visitoolkit_eventsystem"
 -hochladen des in ...\dist\. erzeugten Python-Installationspakets: "twine upload dist\*"
 (Ziel ist defaultmässig PyPI.org, twine fragt dann nach PyPI-Benutzer/Passwort)

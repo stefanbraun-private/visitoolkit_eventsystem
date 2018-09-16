@@ -118,7 +118,7 @@ PyPI Package erstellen und veröffentlichen:
 -hochladen des in ...\dist\. erzeugten Python-Installationspakets: "twine upload dist\*"
 (Ziel ist defaultmässig PyPI.org, twine fragt dann nach PyPI-Benutzer/Passwort)
 =>Paket ist dann unter https://pypi.org/project/visitoolkit_eventsystem
-
+(HINWEIS: offenbar ersetzt PyPI den "_" mit einem "-", darum heisst das PyPI-Paket dann "visitoolkit-eventsystem"...)
 
 ==>nun müsste das Python-Package von allen Python-Entwicklern genutzt werden können,
 z.B. in "Pycharm" -> "Settings" -> "Project xxx" -> "Project Interpreter" (grünes Conda-Zeichen soll inaktiv sein)

@@ -11,8 +11,8 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 
 
 setup(
-    name='visitoolkit_eventsystem',
-    version='0.1.3',
+    name='visitoolkit-eventsystem',
+    version='0.1.4',
     packages=['visitoolkit_eventsystem'],
     url='https://github.com/stefanbraun-private/visitoolkit_eventsystem',
     license='GPL-3.0',

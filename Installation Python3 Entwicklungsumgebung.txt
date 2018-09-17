@@ -57,7 +57,17 @@ als Teil eines grösseren Projektes
 =>damit möglichst keine Probleme und Verwechslungen auftauchen:
 -auf PyPI prüfen ob Projektname einmalig ist
 -aus Markenschutzgründen im Internet nach Namensgleichheit suchen
--Package-Name == Projektname in Pycharm == Projektname auf PyPI
+-beabsichtigte Konsistenz: Python-Package-Name == Projektname in Pycharm == Projektname auf PyPI
+ ==>LEIDER hat man folgende Unschönheit/Einschränkung:
+    -Python-Package-Name: darf keine Bindestriche enthalten, wird als Subtraktion geparst und ergibt somit Syntax-Error beim Import...
+    -Projektname auf PyPI: alle Sonderzeichen und Unterstriche werden durch Bindestriche ersetzt
+    -um Wortkombinationen lesbar zu machen und möglichst den Python-Richtlinien zu folgen,
+     muss somit alles klein geschrieben und mit Unterstrichen getrennt sein.
+     =>damit PyPI-Package problemlos importiert werden kann: Unterschied beachten!!!
+       PyPI-Projekt: 'visitoolkit-eventsystem' // Python-Package: 'visitoolkit_eventsystem'
+     (nach vielen erfolglosen Versuchen wundert es mich, dass diese Fehlerquelle kaum irgendwo erwähnt wird...!)
+       http://pybuilder.github.io/documentation/external_plugins.html#Pluginnaming
+       https://mail.python.org/pipermail/distutils-sig/2011-August/017936.html
 
 -via Startmenü "Anaconda-Navigator" starten
 neues Environment "visitoolkit_eventsystem" (Python 3.x) erstellen

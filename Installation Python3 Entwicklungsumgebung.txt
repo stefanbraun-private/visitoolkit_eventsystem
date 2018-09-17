@@ -127,6 +127,8 @@ PyPI Package erstellen und veröffentlichen:
 -in Projektverzeichnis wechseln: "cd C:\Users\Asenta\PycharmProjects\visitoolkit_eventsystem"
 -hochladen des in ...\dist\. erzeugten Python-Installationspakets: "twine upload dist\*"
 (Ziel ist defaultmässig PyPI.org, twine fragt dann nach PyPI-Benutzer/Passwort)
+=>bei Fehler "HTTPError: 400 Client Error: This filename has already been used, use a different version."
+  löscht man am besten die alten Releases im Unterverzeichnis ...\dist
 =>Paket ist dann unter https://pypi.org/project/visitoolkit_eventsystem
 (HINWEIS: offenbar ersetzt PyPI den "_" mit einem "-", darum heisst das PyPI-Paket dann "visitoolkit-eventsystem"...)
 

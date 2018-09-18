@@ -1,6 +1,10 @@
 # visitoolkit_eventsystem
-minimalistic event system 
-*migrated to Python 3 and separated as standalone PyPI package*
+minimalistic event system  
+
+**Installation via pip**   
+https://pypi.org/project/visitoolkit-eventsystem   
+*(runs on Python 3)*  
+
 
 ## description
 Registered handlers (a bag of handlers) getting called when event gets fired  

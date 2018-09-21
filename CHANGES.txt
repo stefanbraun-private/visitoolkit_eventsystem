@@ -1,3 +1,5 @@
+v0.1.4a, September 21th 2018 -- improvements in README =>PyPI doesn't allow reusing same release =>increasing version number.
+
 v0.1.4, September 16th 2018 -- Python-package is on PyPI but it's invisible in Pycharm's PyPI-browser...
                                =>name fixing: PyPI-project: 'visitoolkit-eventsystem' // Python-package: 'visitoolkit_eventsystem'
 

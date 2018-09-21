@@ -12,36 +12,43 @@ using ideas from "axel events" https://github.com/axel-events/axel
 and "event system" from http://www.valuedlessons.com/2008/04/events-in-python.html
 
 ## usage
-    import visitoolkit_eventsystem.eventsystem as eventsystem
+```python
+from visitoolkit_eventsystem import eventsystem
 
-    # handlers are callback functions in your code,
-    # when firing an event visitoolkit_eventsystem will call them with the given argument(s)
-    def cb1(event_id, *arg, **args):
-        if event_id > 0:
-            # handle event...
-            return True
-        else:
-            return False
+# handlers are callback functions in your code,
+# when firing an event visitoolkit_eventsystem will call them with the given argument(s)
+def cb1(event_id, *arg, **args):
+    if event_id > 0:
+        # handle event...
+        return True
+    else:
+        return False
 
-    # Default is synchronous execution of handlers (blocking main thread, collecting all results)
-    # sync_mode=False means asynchronous execution of handlers (one background thread calls all handlers) 
-    # =>Details about flag "exc_info"(default is True): https://docs.python.org/3/library/sys.html#sys.exc_info
-    # =>Flag "traceback" (default is False) controls verbosity of error_info when an exception occurred
-    es = eventsystem.EventSystem(sync_mode=True)
-    
-    # adding or removing handlers in list-like syntax
-    es += cb1
+# Default is synchronous execution of handlers (blocking main thread, collecting all results)
+# sync_mode=False means asynchronous execution of handlers (one background thread calls all handlers) 
+# =>Details about flag "exc_info"(default is True): https://docs.python.org/3/library/sys.html#sys.exc_info
+# =>Flag "traceback" (default is False) controls verbosity of error_info when an exception occurred
+es = eventsystem.EventSystem(sync_mode=True)
 
-    #The execution result is returned as a list containing all results per handler having this structure:
-    #  exec_result = [
-    #      (True, result, handler),        # on success
-    #      (False, error_info, handler),   # on error
-    #      (None, None, handler), ...      # asynchronous execution
-    #  ]
+# adding or removing handlers in list-like syntax
+es += cb1
 
-    # firing event
-    result = es(42)
+#The execution result is returned as a list containing all results per handler having this structure:
+#  exec_result = [
+#      (True, result, handler),        # on success
+#      (False, error_info, handler),   # on error
+#      (None, None, handler), ...      # asynchronous execution
+#  ]
 
+# firing event
+result = es(42)
+```
+
+Increasing logging level for bughunting:
+```python
+import logging
+logging.getLogger('visitoolkit_eventsystem').setLevel(logging.DEBUG)
+```
 
 ## background information
 **visitoolkit_eventsystem** is used in **visitoolkit_connector** as core part of **visitoolkit**. 
